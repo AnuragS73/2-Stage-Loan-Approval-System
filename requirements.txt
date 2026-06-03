@@ -6,3 +6,4 @@ ipykernel
 streamlit
 scikit-learn
 joblib
+scipy
