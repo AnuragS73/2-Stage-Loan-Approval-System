@@ -7,4 +7,4 @@ streamlit
 scikit-learn
 joblib
 scipy
-math
+xgboost
