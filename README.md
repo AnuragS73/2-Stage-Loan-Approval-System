@@ -58,7 +58,7 @@ for approved applicants.
 # 📂 Project Structure
 
 ```text
-Loan_ml/
+2-Stage-Loan-Approval-System/
 │
 ├── .gitignore
 ├── README.md
@@ -421,13 +421,13 @@ The application provides:
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/AnuragS73/2-Stage-Loan-Approval-System.git
 ```
 
 Navigate to project:
 
 ```bash
-cd Loan_ml
+cd 2-Stage-Loan-Approval-System
 ```
 
 Install dependencies:
@@ -508,7 +508,6 @@ Skills:
 
 # ⭐ Future Enhancements
 
-- SHAP Explainability
 - Probability Calibration
 - Applicant Risk Segmentation
 - Model Monitoring Dashboard
