@@ -2,19 +2,28 @@
 
 An end-to-end Machine Learning project that predicts:
 
-- ✅ Whether a loan application will be approved or rejected
-- ✅ The eligible loan amount for approved applicants
-- ✅ Estimated EMI based on loan tenure and interest rate
+- ✅ Whether a loan application will be approved or rejected  
+- ✅ The eligible loan amount for approved applicants  
+- ✅ Estimated EMI based on loan tenure and interest rate  
 
 The project follows a complete Data Science lifecycle including:
 
-- Data Cleaning
-- Exploratory Data Analysis (EDA)
-- Feature Engineering
-- Classification Modeling
-- Regression Modeling
-- Hyperparameter Tuning
-- Model Deployment using Streamlit
+- Data Cleaning  
+- Exploratory Data Analysis (EDA)  
+- Feature Engineering  
+- Classification Modeling  
+- Regression Modeling  
+- Hyperparameter Tuning  
+- Model Deployment using Streamlit  
+
+---
+
+# 🌐 Live Demo
+
+🚀 Try the deployed application here  
+
+**🔗 Live App**  
+👉 https://2-stage-loan-approval-system-anurags73.streamlit.app/
 
 ---
 
@@ -24,7 +33,7 @@ Financial institutions evaluate multiple factors before approving a loan applica
 
 This project simulates a real-world loan underwriting system by building:
 
-### 1. Loan Approval Classification Model
+## 1. Loan Approval Classification Model
 
 Predicts:
 
@@ -33,7 +42,7 @@ Approved
 Rejected
 ```
 
-### 2. Loan Amount Regression Model
+## 2. Loan Amount Regression Model
 
 Predicts:
 
@@ -41,7 +50,7 @@ Predicts:
 Eligible Loan Amount
 ```
 
-### 3. EMI Calculator
+## 3. EMI Calculator
 
 Calculates:
 
@@ -112,39 +121,39 @@ The dataset contains applicant information, financial details, asset information
 
 The EDA notebook covers:
 
-### Data Quality Checks
+## Data Quality Checks
 
-- Missing values
-- Duplicate records
-- Data types
+- Missing values  
+- Duplicate records  
+- Data types  
 
-### Univariate Analysis
+## Univariate Analysis
 
-- Distribution plots
-- Histograms
-- Boxplots
+- Distribution plots  
+- Histograms  
+- Boxplots  
 
-### Bivariate Analysis
+## Bivariate Analysis
 
-- Loan status vs income
-- Loan status vs CIBIL score
-- Loan status vs loan amount
+- Loan status vs income  
+- Loan status vs CIBIL score  
+- Loan status vs loan amount  
 
-### Correlation Analysis
+## Correlation Analysis
 
 Heatmap analysis revealed:
 
 ### Strongest Positive Indicators
 
-- CIBIL Score
-- Asset Coverage Ratio
-- Wealth CIBIL Score
+- CIBIL Score  
+- Asset Coverage Ratio  
+- Wealth CIBIL Score  
 
 ### Key Observations
 
-- Higher CIBIL scores significantly increase approval probability.
-- Applicants with higher asset coverage are more likely to receive approvals.
-- Loan amount alone has limited predictive power compared to creditworthiness.
+- Higher CIBIL scores significantly increase approval probability  
+- Applicants with higher asset coverage are more likely to receive approvals  
+- Loan amount alone has limited predictive power compared to creditworthiness  
 
 ---
 
@@ -165,67 +174,55 @@ total_assets = (
 
 Purpose:
 
-- Represents overall wealth.
+- Represents overall wealth
 
 ---
 
 ## 2. Loan Income Ratio
 
 ```python
-loan_income_ratio = (
-    loan_amount /
-    income_annum
-)
+loan_income_ratio = loan_amount / income_annum
 ```
 
 Purpose:
 
-- Measures borrowing relative to income.
+- Measures borrowing relative to income
 
 ---
 
 ## 3. Asset Coverage Ratio
 
 ```python
-asset_coverage_ratio = (
-    total_assets /
-    loan_amount
-)
+asset_coverage_ratio = total_assets / loan_amount
 ```
 
 Purpose:
 
-- Measures ability to cover the loan using assets.
+- Measures ability to cover the loan using assets
 
 ---
 
 ## 4. Income Per Dependent
 
 ```python
-income_per_dependent = (
-    income_annum /
-    (no_of_dependents + 1)
-)
+income_per_dependent = income_annum / (no_of_dependents + 1)
 ```
 
 Purpose:
 
-- Captures financial burden.
+- Captures financial burden
 
 ---
 
 ## 5. Wealth CIBIL Score
 
 ```python
-wealth_cibil_score = (
-    total_assets *
-    cibil_score
-)
+wealth_cibil_score = total_assets * cibil_score
 ```
 
 Purpose:
 
-- Combines creditworthiness and net worth.
+- Combines creditworthiness and net worth
 
 ---
 
@@ -269,19 +266,9 @@ loan_status
 
 ## Models Evaluated
 
-### Logistic Regression
-
-Baseline linear classifier.
-
-### Random Forest Classifier
-
-Tree-based ensemble model.
-
-### XGBoost Classifier
-
-Gradient boosting model optimized for tabular data.
-
----
+- Logistic Regression  
+- Random Forest Classifier  
+- XGBoost Classifier  
 
 ## Classification Results
 
@@ -297,19 +284,17 @@ Gradient boosting model optimized for tabular data.
 
 Reason:
 
-- Highest ROC-AUC
-- Highest Recall
-- Excellent generalization
-- Robust to outliers
-- Handles non-linear relationships effectively
+- Highest ROC-AUC  
+- Highest Recall  
+- Excellent generalization  
+- Robust to outliers  
+- Handles non-linear relationships effectively  
 
 ---
 
 # 💰 Problem 2: Loan Amount Prediction
 
 Only approved applications are considered.
-
----
 
 ## Features Used
 
@@ -332,19 +317,9 @@ Only approved applications are considered.
 
 ## Models Evaluated
 
-### Linear Regression
-
-Baseline model.
-
-### Random Forest Regressor
-
-Tree-based ensemble model.
-
-### XGBoost Regressor
-
-Gradient boosting regression model.
-
----
+- Linear Regression  
+- Random Forest Regressor  
+- XGBoost Regressor  
 
 ## Regression Results
 
@@ -382,7 +357,7 @@ Top drivers of loan approval:
 
 ### Business Insight
 
-Creditworthiness (CIBIL Score) is by far the most influential factor in loan approval decisions.
+Creditworthiness (CIBIL Score) is the strongest factor influencing loan approval decisions.
 
 ---
 
@@ -390,29 +365,29 @@ Creditworthiness (CIBIL Score) is by far the most influential factor in loan app
 
 The application provides:
 
-### Applicant Inputs
+## Applicant Inputs
 
-- Dependents
-- Education
-- Employment Status
-- Income
-- Loan Details
-- Asset Information
+- Dependents  
+- Education  
+- Employment Status  
+- Income  
+- Loan Details  
+- Asset Information  
 
-### Predictions
+## Predictions
 
-- Loan Approval Probability
-- Approval Status
-- Eligible Loan Amount
-- EMI Details
+- Loan Approval Probability  
+- Approval Status  
+- Eligible Loan Amount  
+- EMI Details  
 
-### Generated Features
+## Generated Features
 
-- Total Assets
-- Loan Income Ratio
-- Asset Coverage Ratio
-- Income Per Dependent
-- Wealth CIBIL Score
+- Total Assets  
+- Loan Income Ratio  
+- Asset Coverage Ratio  
+- Income Per Dependent  
+- Wealth CIBIL Score  
 
 ---
 
@@ -438,17 +413,21 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Run Streamlit App
+# ▶️ Run Locally
+
+Launch the Streamlit application:
 
 ```bash
 streamlit run app/app.py
 ```
 
-Application will be available at:
+Application will run on:
 
 ```text
 http://localhost:8501
 ```
+
+Open the browser and test predictions locally.
 
 ---
 
@@ -467,7 +446,7 @@ joblib
 streamlit
 ```
 
-Install:
+Install all dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -479,12 +458,12 @@ pip install -r requirements.txt
 
 This project demonstrates:
 
-- End-to-End Machine Learning Pipeline
-- Credit Risk Assessment
-- Loan Underwriting Automation
-- Feature Engineering for Financial Analytics
-- Model Deployment using Streamlit
-- Classification and Regression Modeling
+- End-to-End Machine Learning Pipeline  
+- Credit Risk Assessment  
+- Loan Underwriting Automation  
+- Feature Engineering for Financial Analytics  
+- Model Deployment using Streamlit  
+- Classification and Regression Modeling  
 
 ---
 
@@ -494,24 +473,22 @@ This project demonstrates:
 
 Data & Business Analyst
 
-Skills:
+### Skills
 
-- SQL
-- Python
-- Power BI
-- Azure Data Explorer (Kusto)
-- Machine Learning
-- Streamlit
-- Data Warehousing
+- SQL  
+- Python  
+- Power BI  
+- Azure Data Explorer (Kusto)  
+- Machine Learning  
+- Streamlit  
+- Data Warehousing  
 
 ---
 
 # ⭐ Future Enhancements
 
-- Probability Calibration
-- Applicant Risk Segmentation
-- Model Monitoring Dashboard
-- Cloud Deployment (Streamlit)
-- Automated Retraining Pipeline
-
----
+- Probability Calibration  
+- Applicant Risk Segmentation  
+- Model Monitoring Dashboard  
+- Cloud Deployment Improvements  
+- Automated Retraining Pipeline  
